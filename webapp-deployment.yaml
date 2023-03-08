@@ -1,0 +1,22 @@
+apiVersion: apps/v1 # 객체를 생성하는 데 사용되는 API 버전이다.
+kind: Deployment # 쿠버네티스 디플로이먼트를 만들고 있음을 설명한다
+metadata: # 디플로이먼트 이름 (필수 키)과 디플로이먼트에 추가할 선택적 레이블을 지정한다.
+  name: webapp-deployment
+  labels:
+    app: webapp
+spec:
+  replicas: 1 # 이 디플로이먼트에 생성할 파드 수를 지정한다.
+  selector: # 디플로이먼트에서 파드를 찾는 방법이다.
+    matchLabels:
+      app: webapp
+  template:
+    metadata: # 이 디플로이먼트에서 생성된 파드의 이름은 이 레이블에서 지정된다.
+      labels:
+        app: webapp
+    spec:
+      containers: # 이 파드에 배포해야 하는 컨테이너를 지정한다. 여기서는 이전 절에서 만든 이미지로 하나의 컨테이너를 배포한다. 이전 절에서 이미지가 쿠버네티스 클러스터에서 사용 가능하다는 것을 확인했고, 이미지를 레지스트리에 업로드하지 않았기 때문에 imagePullPolicy가 Never로 설정돼있다.
+      - name: webapp
+        image: web-app:1.0
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000 # 클러스터에 노출된 컨테이너의 포트이다.
