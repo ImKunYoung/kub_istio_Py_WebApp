@@ -1,4 +1,19 @@
 ```shell
+minikube start
+```
+
+
+```shell
+minikube stop
+```
+
+
+```shell
+minikube dashboard
+```
+
+
+```shell
 eval $(minikube docker-env)
 ```
 
@@ -28,3 +43,4 @@ kubectl get replicaset -o wide
 ```shell
 kubectl get pods -o wide
 ```
+
