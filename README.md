@@ -23,3 +23,9 @@ kubectl get deployments
 ```shell
 kubectl get replicaset -o wide
 ```
+
+
+```shell
+kubectl get pods -o wide
+```
+=======
