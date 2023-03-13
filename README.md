@@ -44,3 +44,7 @@ kubectl get replicaset -o wide
 kubectl get pods -o wide
 ```
 
+
+```shell
+kubectl port-forward webapp-deployment-f59b577fc-7vtcm 5000:5000
+```
