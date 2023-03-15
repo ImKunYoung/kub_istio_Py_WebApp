@@ -75,3 +75,12 @@ http://localhost:5000/
 ```shell
 kubectl logs -f webapp-deployment-f58b6c774-z7k8f
 ```
+
+
+<br/>
+
+## 쿠버네티스 서비스
+
+```shell
+kubectl apply -f webapp-service.yaml
+```
