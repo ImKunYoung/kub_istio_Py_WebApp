@@ -22,6 +22,10 @@ eval $(minikube docker-env)
 docker build -t web-app:1.0 .
 ```
 
+```shell
+docker push web-app
+```
+
 
 
 ```shell
@@ -46,5 +50,5 @@ kubectl get pods -o wide
 
 
 ```shell
-kubectl port-forward webapp-deployment-f59b577fc-7vtcm 5000:5000
+kubectl port-forward webapp-deployment-f59b577fc-w4s7g 5000:5000
 ```
