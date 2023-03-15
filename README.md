@@ -84,3 +84,12 @@ kubectl logs -f webapp-deployment-f58b6c774-z7k8f
 ```shell
 kubectl apply -f webapp-service.yaml
 ```
+
+
+<br/>
+
+## 서비스 생성 확인
+
+```shell
+kubectl describe service webservice
+```
