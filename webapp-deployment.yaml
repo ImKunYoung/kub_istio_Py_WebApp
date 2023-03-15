@@ -16,7 +16,7 @@ spec:
     spec:
       containers: # 이 파드에 배포해야 하는 컨테이너를 지정한다. 여기서는 이전 절에서 만든 이미지로 하나의 컨테이너를 배포한다. 이전 절에서 이미지가 쿠버네티스 클러스터에서 사용 가능하다는 것을 확인했고, 이미지를 레지스트리에 업로드하지 않았기 때문에 imagePullPolicy가 Never로 설정돼있다.
       - name: webapp
-        image: web-app:1.0
-        imagePullPolicy: Never
+        image: imkunyoung/web-app
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000 # 클러스터에 노출된 컨테이너의 포트이다.
