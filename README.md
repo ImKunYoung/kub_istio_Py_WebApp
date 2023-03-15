@@ -50,7 +50,13 @@ kubectl get replicaset -o wide
 kubectl get pods -o wide
 ```
 
+## 파드 프락시 제공
 
 ```shell
-kubectl port-forward webapp-deployment-f59b577fc-w4s7g 5000:5000
+kubectl port-forward webapp-deployment-f58b6c774-z7k8f 5000:5000
+```
+
+
+```
+http://localhost:5000/
 ```
