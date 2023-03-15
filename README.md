@@ -17,16 +17,18 @@ minikube dashboard
 eval $(minikube docker-env)
 ```
 
-
 ```shell
 docker build -t web-app:1.0 .
 ```
+
+## 도커 허브 푸시
 
 ```shell
 docker push web-app
 ```
 
 
+## 애플리케이션 배포
 
 ```shell
 kubectl apply -f webapp-deployment.yaml
