@@ -93,3 +93,21 @@ kubectl apply -f webapp-service.yaml
 ```shell
 kubectl describe service webservice
 ```
+
+
+<br/>
+
+## 서비스 생성 시 로드밸런서 생성 
+
+```shell
+kubectl apply -f webapp-service-loadbalancer.yaml
+```
+
+<br/>
+
+## 서비스 생성 시 로드밸런서 생성 확인
+
+
+```shell
+kubectl get service webservice
+```
