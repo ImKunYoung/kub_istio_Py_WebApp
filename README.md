@@ -111,3 +111,23 @@ kubectl apply -f webapp-service-loadbalancer.yaml
 ```shell
 kubectl get service webservice
 ```
+
+<br/>
+
+## 쿠버네티스의 자가 치유
+
+```shell
+kubectl scale --replicas=3 deployment webapp-deployment
+```
+
+```shell
+kubectl get pods
+```
+
+<br/>
+
+## 파드 삭제
+
+```shell
+kubectl delete pod webapp-deployment-f58b6c774-z7k8f
+```
