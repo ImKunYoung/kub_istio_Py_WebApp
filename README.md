@@ -131,3 +131,16 @@ kubectl get pods
 ```shell
 kubectl delete pod webapp-deployment-f58b6c774-z7k8f
 ```
+
+
+<br/>
+<br/>
+
+# 마이크로서비스 추가
+
+<br/>
+
+## 애플리케이션 설정
+```shell
+docker build -t frontend:1.0 .
+```
