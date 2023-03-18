@@ -59,7 +59,7 @@ kubectl get pods -o wide
 ## 파드 프락시 제공
 
 ```shell
-kubectl port-forward webapp-deployment-f58b6c774-z7k8f 5000:5000
+kubectl port-forward webapp-deployment-7c8576856-64t5p 5000:5000
 ```
 
 
@@ -73,7 +73,7 @@ http://localhost:5000/
 ## 파드에서 애플리케이션 로그에 액세스
 
 ```shell
-kubectl logs -f webapp-deployment-f58b6c774-z7k8f
+kubectl logs -f webapp-deployment-7c8576856-64t5p
 ```
 
 
