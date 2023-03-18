@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db1
+spec:
+  type: ExternalName
+  externalName: mysql01.database.test.com
