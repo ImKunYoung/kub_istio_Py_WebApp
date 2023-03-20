@@ -17,6 +17,6 @@ spec:
       containers:
         - name: webapp
           image: imkunyoung/web-app:2.0
-          imagePullPolicy: Never
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
