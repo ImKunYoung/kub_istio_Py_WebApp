@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: frontend-app:1.0
-        imagePullPolicy: Never
+        image: imkunyoung/frontend-app:1.0
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
