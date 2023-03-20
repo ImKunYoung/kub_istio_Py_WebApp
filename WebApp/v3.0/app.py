@@ -2,7 +2,7 @@ from flask import Flask
 import datetime
 import time
 
-time.sleep(10)
+time.sleep(60)
 app = Flask(__name__)
 
 
