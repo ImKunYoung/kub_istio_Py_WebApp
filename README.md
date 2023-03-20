@@ -133,6 +133,20 @@ kubectl delete pod webapp-deployment-f58b6c774-z7k8f
 ```
 
 
+
+
+
+<br/>
+<br/>
+
+
+
+
+
+---------------------------------------------
+
+
+
 <br/>
 <br/>
 
@@ -140,7 +154,27 @@ kubectl delete pod webapp-deployment-f58b6c774-z7k8f
 
 <br/>
 
-## 애플리케이션 설정
+
+## 애플리케이션 배포
+
+
+
 ```shell
-docker build -t frontend:1.0 .
+docker build -t frontend-app:1.0 .
 ```
+
+
+```shell
+kubectl apply -f frontend-deployment.yaml
+```
+
+<br/>
+
+## 파드 프락시 제공
+
+```shell
+kubectl port-forward frontend-deployment-5fc86fcd46-q6s8h 8080:8080
+```
+
+
+
