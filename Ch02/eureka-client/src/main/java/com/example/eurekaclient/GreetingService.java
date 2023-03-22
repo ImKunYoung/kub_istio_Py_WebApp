@@ -24,7 +24,7 @@ public class GreetingService {
 
 
     public String greet(String username) {
-        URI uri = URI.create("http://eureka-service/greeting/" + username);
+        URI uri = URI.create("http://localhost:8080/greeting/" + username);
         return this.restTemplate.getForObject(uri, String.class);
     }
 
