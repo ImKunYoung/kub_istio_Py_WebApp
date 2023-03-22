@@ -1,9 +1,11 @@
 package com.example.eurekaclient;
 
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.assertj.core.api.BDDAssertions.then;
 
@@ -17,6 +19,7 @@ import static org.assertj.core.api.BDDAssertions.then;
  * -----------------------------------------------------------
  * 2023-03-22        ImKunYoung       최초 생성
  */
+@RunWith(SpringRunner.class)
 @SpringBootTest
 @ActiveProfiles("test")
 class GreetingServiceTest {
