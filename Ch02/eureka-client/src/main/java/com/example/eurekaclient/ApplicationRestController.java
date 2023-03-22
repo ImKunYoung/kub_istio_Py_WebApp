@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ApplicationRestController {
 
-    @RequestMapping
+    @RequestMapping("/greeting/{user}")
     public String greeting(@PathVariable String user) {
         return "Hello! "+user;
     }
