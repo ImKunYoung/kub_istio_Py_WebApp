@@ -19,4 +19,4 @@ spec:
         image: imkunyoung/web-app
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 5000 # 클러스터에 노출된 컨테이너의 포트이다.
+        - containerPort: 5000 #  클러스터에 노출된 컨테이너의 포트이다.
