@@ -26,7 +26,7 @@ class GreetingServiceTest {
 
 
     @Test
-    void testGreetingService() {
+    void testGreetingService() throws InterruptedException {
         String response = greetingService.greet("user");
         then(response).contains("Hi! User");
     }
