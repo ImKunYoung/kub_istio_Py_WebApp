@@ -16,8 +16,8 @@ import java.net.URI;
  * -----------------------------------------------------------
  * 2023-03-22        ImKunYoung       최초 생성
  */
-@Service
 @RequiredArgsConstructor
+@Service
 public class GreetingService {
 
     private final RestTemplate restTemplate;
