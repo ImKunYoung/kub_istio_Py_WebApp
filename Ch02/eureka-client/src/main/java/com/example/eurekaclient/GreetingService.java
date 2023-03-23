@@ -1,5 +1,7 @@
 package com.example.eurekaclient;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -23,11 +25,16 @@ public class GreetingService {
     private final RestTemplate restTemplate;
 
 
-    public String greet(String username) {
+    @HystrixCommand(fallbackMethod = "fallbackGreeting", commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")
+    })
+    public String greet(String username) throws InterruptedException {
         URI uri = URI.create("http://localhost:8080/greeting/" + username);
         return this.restTemplate.getForObject(uri, String.class);
     }
 
-
+    public String fallbackGreeting(String username) {
+        return "Hi! there";
+    }
 
 }
