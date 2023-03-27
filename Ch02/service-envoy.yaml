@@ -3,8 +3,8 @@ static_resources:
     - address:
         socket_address:
           address: 0.0.0.0
-          port_value: 80
-      filter_chains:
+          port_value: 80 # Envoy will listen on port 80
+      filter_chains: # Envoy will use the following filter chain
         - filters:
             - name: envoy.http_connection_manager
               typed_config:
@@ -21,7 +21,7 @@ static_resources:
                         - match:
                             prefix: "/greeting"
                           route:
-                            cluster: local_service
+                            cluster: greeting_service # Envoy will route requests to the greeting_service cluster
                 http_filters:
                   - name: envoy.router
                     typed_config: {}
@@ -31,7 +31,7 @@ static_resources:
       type: strict_dns
       lb_policy: round_robin
       load_assignment:
-        cluster_name: local_service
+        cluster_name: greeting_service # Envoy will route requests to the greeting_service cluster
         endpoints:
           - lb_endpoints:
               - endpoint:
