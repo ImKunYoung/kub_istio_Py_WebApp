@@ -31,7 +31,7 @@ static_resources:
       type: strict_dns
       lb_policy: round_robin
       load_assignment:
-        cluster_name: greeting_service # Envoy will route requests to the greeting_service cluster
+        cluster_name: greeting_service # greeting_service 의 위치는 클러스터로 정의됨.
         endpoints:
           - lb_endpoints:
               - endpoint:
